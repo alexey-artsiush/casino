@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Roboto"),
+        url("src/fonts/roboto.woff2") format("woff2"),
+        url("src/fonts/roboto.woff") format("woff");
+}
+
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: $c-white;
+}
+
+a:hover {
+    color: $c-red-dark;
+}
+
+p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: 30px 0;
+    font-size: 50px;
+    font-weight: 700;
+
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 15px 0;
+    border-bottom: 1px solid $c-grey;
+    min-height: 40px;
+}
