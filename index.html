@@ -10,8 +10,6 @@
     <title>Vavada казино онлайн</title>
     <link rel="stylesheet" href="./src/style/css/index.min.css" />
     <link rel="icon" type="image/x-icon" href="src/img/favicon.ico">
-    <link async href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -20,38 +18,45 @@
             <div class="header__logo"><a href="/"><img width="100%" height="100%" src="src/img/logo.svg" alt="logo"></a>
             </div>
             <div class="header__buttons">
-                <a href="#" class="header__buttons-enter">ВОЙТИ</a>
-                <a href="#" class="header__buttons-registr">РЕГИСТРАЦИЯ</a>
+                <div class="header__buttons-ent">
+                    <a href="#" class="header__buttons-enter">ВОЙТИ</a>
+                </div>
+                <div class="header__buttons-reg">
+                    <a href="#" class="header__buttons-registr">РЕГИСТРАЦИЯ</a>
+                </div>
             </div>
         </div>
 
     </div>
     <main class="main">
         <div class="main__hero">
-            <div class="main__hero-lazy">
-                <img loading="lazy" class="main__hero-img" width="100%" height="100%"
-                    src="src/img/slider/slide-1-lg_1x.jpg" alt="main image" />
-            </div>
+            <picture>
+                <source media="(min-width: 900px)" srcset="src/img/slider/slide-1.webp" type="image/webp">
+                <source media="(min-width: 601px)" srcset="src/img/slider/slide-1-tb.webp" type="image/webp">
+                <source srcset="src/img/slider/slide-1-mb.webp" type="image/webp">
+                <img srcset="src/img/slider/slide-1-mb.webp 600w,  src/img/slider/slide-1-tb.webp 900w, src/img/slider/slide-1.webp 1440w"
+                    src="src/img/slider/slide-1.webp" alt="Казино Vavada играй и побеждай!" width="400" height="106">
+            </picture>
         </div>
         <div class="main__nav">
-            <a class="main__nav-slots" href="#">VAVADA</a>
-            <a class="main__nav-games" href="#">LIVE ИГРЫ</a>
-            <a class="main__nav-tables" href="#">СТОЛЫ</a>
-            <a class="main__nav-tournirs" href="#">ТУРНИРЫ</a>
+            <a class="main__nav-slots" href="#"><img src="src/img/icon_slots.svg" alt="SLOTS" />СЛОТЫ</a>
+            <a class="main__nav-games" href="#"><img src="src/img/icon_live.svg" alt="GAMES" /> LIVE ИГРЫ</a>
+            <a class="main__nav-descks" href="#"><img src="src/img/icon_desks.svg" alt="TABLES" />СТОЛЫ</a>
+            <a class="main__nav-tournirs" href="#"><img src="src/img/icon_tour.svg" alt="TOURNIRS" />ТУРНИРЫ</a>
         </div>
         <div class="main__wrapper">
             <!-- GAMES -->
             <div class="main__grid">
                 <div class="main__grid-game">
-                    <img class="main__grid-game-img" src="src/img/webp/s1.webp" alt="game" />
+                    <img width="230px" height="174" class="main__grid-game-img" src="src/img/webp/s1.webp" alt="game" />
                     <div class="main__grid-game-title"><span>Basketball Star</span> </div>
                 </div>
                 <div class="main__grid-game">
-                    <img class="main__grid-game-img" src="src/img/webp/s2.webp" alt="game" />
+                    <img width="230px" height="174" class="main__grid-game-img" src="src/img/webp/s2.webp" alt="game" />
                     <div class="main__grid-game-title"><span>Cubes</span></div>
                 </div>
                 <div class="main__grid-game">
-                    <img class="main__grid-game-img" src="src/img/webp/s3.webp" alt="game" />
+                    <img width="230px" height="174" class="main__grid-game-img" src="src/img/webp/s3.webp" alt="game" />
                     <div class="main__grid-game-title"><span>Fire in the Hole</span></div>
 
                 </div>
@@ -86,6 +91,7 @@
                     <div class="main__grid-game-title"><span>Take Olympus</span></div>
                 </div>
             </div>
+
             <!-- /GAMES -->
 
             <div class="main__blog">
@@ -104,74 +110,77 @@
                     Уникальные
                     предложения позволяют приятно провести время, заработать.
                 </p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Название</td>
-                            <td>Vavada</td>
-                        </tr>
-                        <tr>
-                            <td>Основано</td>
-                            <td>23.09.2017</td>
-                        </tr>
-                        <tr>
-                            <td>Лицензия</td>
-                            <td>8048/JAZ Кюрасао</td>
-                        </tr>
-                        <tr>
-                            <td>Тип онлайн казино</td>
-                            <td>Мобильное, Live, Браузерное</td>
-                        </tr>
-                        <tr>
-                            <td>Платформа</td>
-                            <td>Windows, Android, iOS</td>
-                        </tr>
-                        <tr>
-                            <td>Провайдеры</td>
-                            <td>Betsoft, EGT, Evolution Gaming, Igrosoft, Microgaming, NetEnt, Novomatic, Thunderkick,
-                                Quickspin
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Локализация</td>
-                            <td>RU, DE, EN, PL, ES, PT, FR, TR, KZ</td>
-                        </tr>
-                        <tr>
-                            <td>Способы регистрации</td>
-                            <td>Email, смс, соцсети</td>
-                        </tr>
-                        <tr>
-                            <td>Техподдержка</td>
-                            <td>Лайв-чат, почта, телефон</td>
-                        </tr>
-                        <tr>
-                            <td>Способы оплаты</td>
-                            <td>Visa/MasterCard, Piastrix, Monetix, Moneta.ru, Neteller, Skrill, Webmoney, SMS</td>
-                        </tr>
-                        <tr>
-                            <td>Валюта</td>
-                            <td>RUB, EUR, USD, UAH</td>
-                        </tr>
-                        <tr>
-                            <td>Миндеп</td>
-                            <td>50 RUB</td>
-                        </tr>
-                        <tr>
-                            <td>Мин. сумма вывода</td>
-                            <td>1000 RUB</td>
-                        </tr>
-                        <tr>
-                            <td>Мобильная версия</td>
-                            <td>Есть</td>
-                        </tr>
-                        <tr>
-                            <td>Бездеп</td>
-                            <td>Есть</td>
-                        </tr>
-                        <tr>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table__wrapper">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Название</td>
+                                <td>Vavada</td>
+                            </tr>
+                            <tr>
+                                <td>Основано</td>
+                                <td>23.09.2017</td>
+                            </tr>
+                            <tr>
+                                <td>Лицензия</td>
+                                <td>8048/JAZ Кюрасао</td>
+                            </tr>
+                            <tr>
+                                <td>Тип онлайн казино</td>
+                                <td>Мобильное, Live, Браузерное</td>
+                            </tr>
+                            <tr>
+                                <td>Платформа</td>
+                                <td>Windows, Android, iOS</td>
+                            </tr>
+                            <tr>
+                                <td>Провайдеры</td>
+                                <td>Betsoft, EGT, Evolution Gaming, Igrosoft, Microgaming, NetEnt, Novomatic,
+                                    Thunderkick,
+                                    Quickspin
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Локализация</td>
+                                <td>RU, DE, EN, PL, ES, PT, FR, TR, KZ</td>
+                            </tr>
+                            <tr>
+                                <td>Способы регистрации</td>
+                                <td>Email, смс, соцсети</td>
+                            </tr>
+                            <tr>
+                                <td>Техподдержка</td>
+                                <td>Лайв-чат, почта, телефон</td>
+                            </tr>
+                            <tr>
+                                <td>Способы оплаты</td>
+                                <td>Visa/MasterCard, Piastrix, Monetix, Moneta.ru, Neteller, Skrill, Webmoney, SMS</td>
+                            </tr>
+                            <tr>
+                                <td>Валюта</td>
+                                <td>RUB, EUR, USD, UAH</td>
+                            </tr>
+                            <tr>
+                                <td>Миндеп</td>
+                                <td>50 RUB</td>
+                            </tr>
+                            <tr>
+                                <td>Мин. сумма вывода</td>
+                                <td>1000 RUB</td>
+                            </tr>
+                            <tr>
+                                <td>Мобильная версия</td>
+                                <td>Есть</td>
+                            </tr>
+                            <tr>
+                                <td>Бездеп</td>
+                                <td>Есть</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <p>Все игроки, прошедшие регистрацию, получают щедрые бонусы и игровые автоматы от лучших разработчиков
@@ -1325,6 +1334,7 @@
                 </div>
             </div>
 
+            <!-- fPAYMENTS -->
 
             <div class="payments">
                 <span class="help-title">СПОСОБЫ ОПЛАТЫ</span>
@@ -1363,6 +1373,204 @@
                 </div>
                 <div class="payments__wrapper">
                     <img loading="lazy" src="src/img/payment/p12.svg" alt="payment">
+                </div>
+            </div>
+            <div class="partners">
+                <span class="help-title">КОМПАНИИ-ПАРТНЕРЫ</span>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr1.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="90" height="30" src="src/img/providers/pr2.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="70" height="30" src="src/img/providers/pr3.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="110" height="30" src="src/img/providers/pr4.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="39" height="30" src="src/img/providers/pr5.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="55" height="30" src="src/img/providers/pr6.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="120" height="30" src="src/img/providers/pr7.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="70" height="30" src="src/img/providers/pr8.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="40" height="30" src="src/img/providers/pr9.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="150" height="30" src="src/img/providers/pr10.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="70" height="30" src="src/img/providers/pr11.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="150" height="30" src="src/img/providers/pr12.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="80" height="30" src="src/img/providers/pr13.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="50" height="30" src="src/img/providers/pr14.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="40" height="30" src="src/img/providers/pr15.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="120" height="30" src="src/img/providers/pr16.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr17.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr18.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr19.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr20.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr21.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr22.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr23.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr24.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr25.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr26.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr27.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr28.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr29.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr30.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr31.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr32.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr33.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr35.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr36.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr37.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr38.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr39.svg" alt="">
+                    </div>
+                </div>
+                <div class="partner">
+                    <div class="partners__card">
+                        <img loading="lazy" width="60" height="30" src="src/img/providers/pr40.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>

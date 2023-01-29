@@ -4,6 +4,7 @@ body {
 }
 
 .header {
+    font-weight: 500;
     background-color: $c-blue-dark;
     position: fixed;
     width: 100%;
@@ -19,45 +20,58 @@ body {
     }
 
     &__buttons {
+        display: flex;
         margin: auto 0;
         margin-left: auto;
+    }
 
-        .header__buttons-enter {
-            color: $c-white
-        }
-
-        .header__buttons-registr {
-            color: $c-white;
-            background-color: $c-red;
-            padding: 5px 25px;
-            border-radius: 25px;
-            margin: 0 10px;
-            box-shadow: 0 3px 0 0 $c-red-dark, 0 4px 4px 0 #000;
-            text-decoration: none;
-        }
+    &__buttons-enter {
+        color: $c-white;
+        text-decoration: none;
+        border-bottom: 1px solid $c-white;
 
     }
 
-    .header__logo {
+    &__buttons-registr {
+        color: $c-white;
+        background-color: $c-red;
+        padding: 5px 25px;
+        border-radius: 25px;
+        margin: 0 10px;
+        box-shadow: 0 3px 0 0 $c-red-dark, 0 4px 4px 0 #000;
+        text-decoration: none;
+    }
+
+    &__logo {
+        height: 35px;
         width: 170px;
     }
 }
 
 .main {
-    background-color: $c-blue-background;
     padding-bottom: 30px;
+    background: url(../../img/bg-main.svg) repeat-y $c-blue-background;
+    background-size: 100%;
 
     &__hero {
         max-width: 100%;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+        }
     }
 
     &__hero-lazy {
         background-color: $c-blue-dark;
-        height: 30vh;
+        height: 380px;
     }
 
     &__hero-img {
-        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     &__wrapper {
@@ -74,56 +88,84 @@ body {
         background-image: url(../../img/line_bg.svg);
         background-color: $c-blue-dark;
         box-shadow: inset 0 5px 25px 0 rgb(0 0 0 / 80%);
+        text-align: center;
+
+        img {
+            width: 40px;
+        }
     }
 
-    &__nav-slots {
-        color: $c-aqua;
+    &__nav-descks {
+        color: $c-green;
         text-decoration: none;
+
+        img {
+            margin-right: 7px;
+        }
     }
 
     &__nav-games {
         color: $c-red-brown;
         text-decoration: none;
+
+        img {
+            margin-right: 7px;
+        }
     }
 
-    &__nav-tables {
-        color: $c-green;
+    &__nav-slots {
+        color: $c-aqua;
         text-decoration: none;
+
+        img {
+            margin-right: 7px;
+        }
     }
 
     &__nav-tournirs {
         color: $c-yellow;
         text-decoration: none;
+
+        img {
+            margin-right: 7px;
+        }
     }
 
     &__grid {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding-top: 20px;
     }
 
     &__grid-game {
-        margin: 1%;
-        width: 18%;
+        cursor: pointer;
+        margin: 20px 10px;
+        width: 225px;
+        height: 185px;
         box-shadow: 0 4px 9px 0 $c-black-light;
         border-radius: 10px;
+        transition: transform .2s;
     }
 
+    &__grid-game:hover {
+        transform: scale(1.05);
+    }
+
+
     &__grid-game-img {
-        height: 125px;
         -moz-background-size: 100%;
         -webkit-background-size: 100%;
         -o-background-size: 100%;
         background-size: 100%;
-        width: 100%;
         border-radius: 10px 10px 0 0;
     }
 
     &__grid-game-title {
         background-color: $c-black-light;
         display: flex;
-        width: 100%;
+        width: 230px;
         height: 40px;
         border-radius: 0 0 10px 10px;
 
@@ -136,22 +178,25 @@ body {
         color: $c-white;
 
         h1 {
-            font-size: 50px;
             line-height: 55px;
-            text-align: center;
             width: 100%;
-            margin: 30px auto;
-            text-align: center;
         }
     }
 
+    a {
+        text-decoration: none;
+    }
+
+    li {
+        margin: 7px 0;
+    }
 }
 
 //TABLE
 .table__wrapper {
     display: inline-block;
     vertical-align: top;
-    max-width: 100%;
+    width: 100%;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -177,7 +222,7 @@ table th {
 }
 
 table tbody td {
-    border-bottom: 1px solid #252536;
+    border-bottom: 1px solid $c-blue-dark;
     font-weight: 300;
 }
 
@@ -224,6 +269,7 @@ summary {
 //FOOTER
 .footer {
     background-color: $c-black-light;
+    font-weight: 400;
 
     .wrapper {
         display: flex;
@@ -268,7 +314,7 @@ summary {
         border-bottom: 1px solid $c-grey;
         line-height: 30px;
         font-size: 16px;
-        font-weight: 700;
+        font-weight: 900;
         text-transform: uppercase;
         white-space: nowrap;
         color: $c-white;
@@ -282,6 +328,20 @@ summary {
         &__wrapper {
             width: 9%;
             min-width: 70px;
+        }
+    }
+}
+
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+
+    .partner {
+        padding: 10px 15px;
+        width: 125px;
+
+        img {
+            height: 50px;
         }
     }
 }
