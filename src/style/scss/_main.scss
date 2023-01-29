@@ -45,6 +45,16 @@ body {
 
 .main {
     background-color: $c-blue-background;
+    padding-bottom: 30px;
+
+    &__hero {
+        max-width: 100%;
+    }
+
+    &__hero-lazy {
+        background-color: $c-blue-dark;
+        height: 30vh;
+    }
 
     &__hero-img {
         max-width: 100%;
@@ -61,7 +71,7 @@ body {
         font-size: 16px;
         font-weight: 900;
         padding: 25px 0;
-        background-image: url(/src/img/line_bg.svg);
+        background-image: url(../../img/line_bg.svg);
         background-color: $c-blue-dark;
         box-shadow: inset 0 5px 25px 0 rgb(0 0 0 / 80%);
     }
@@ -86,12 +96,6 @@ body {
         text-decoration: none;
     }
 
-    &__dooter-line {
-        width: 100vw;
-        background-image: url(/src/img/dot.svg);
-        background-size: contain;
-    }
-
     &__grid {
         width: 100%;
         display: flex;
@@ -108,7 +112,6 @@ body {
 
     &__grid-game-img {
         height: 125px;
-        background: url(/src/img/webp/s1.webp) no-repeat;
         -moz-background-size: 100%;
         -webkit-background-size: 100%;
         -o-background-size: 100%;
@@ -145,6 +148,15 @@ body {
 }
 
 //TABLE
+.table__wrapper {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
 table {
     width: 100%;
     margin-bottom: 20px;
@@ -153,6 +165,7 @@ table {
     box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
     font-size: 16px;
     color: $c-white;
+    overflow: auto;
 }
 
 table td,
@@ -172,52 +185,102 @@ td:first-child {
     border-right: 1px solid $c-grey;
 }
 
+//FAQ
+
+summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 800;
+    margin: 20px 0;
+    color: $c-red-dark;
+    display: inline;
+    border-bottom: 2px solid $c-red-dark;
+}
+
+//REVIEWS
+
+.review__item {
+    border: 1px dashed $c-grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    background-color: rgba(22, 22, 38, .8);
+    border-radius: 6px;
+}
+
+.review__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+}
+
+.review__person {
+    font-weight: 800;
+    color: $c-red-dark;
+}
+
+
 //FOOTER
 .footer {
     background-color: $c-black-light;
 
     .wrapper {
         display: flex;
-        padding: 50px 0;
+        flex-wrap: wrap;
+        padding: 25px 0;
     }
 
     .main__wrapper {
-        width: 95%;
+        width: 85%;
     }
 
     .help {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         flex-direction: column;
         color: $c-grey;
 
+        &__wrapper {
+            width: 9%;
+            min-width: 70px;
+        }
 
         a {
             text-decoration: none;
             color: $c-white;
             padding: 10px;
             font-size: 15px;
+            padding: 10px;
+        }
+
+        a:hover {
+            transition: 0.3s;
+            color: $c-grey;
         }
     }
 
     .help-title {
         width: 100%;
-        margin-bottom: 18px;
+        margin: 18px 0;
         height: 30px;
-        border-bottom: 1px solid #222330;
+        border-bottom: 1px solid $c-grey;
         line-height: 30px;
-        font-size: 13px;
+        font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
         white-space: nowrap;
-
+        color: $c-white;
     }
 
     .payments {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
 
         &__wrapper {
-            width: 7%;
+            width: 9%;
             min-width: 70px;
         }
     }

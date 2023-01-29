@@ -1,0 +1,110 @@
+@media (max-width: 1023px) {
+    .header {
+        &__wrapper {
+            width: 88%;
+        }
+    }
+
+    .main {
+        &__wrapper {
+            width: 88%;
+        }
+
+        &__grid-game {
+            width: 23%;
+        }
+    }
+
+    .last-child {
+        display: none;
+    }
+
+    .penultimate-child {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        width: 100%;
+
+        &__wrapper {
+            width: 100%;
+        }
+
+        &__logo {
+            padding: 0;
+            max-width: 120px;
+        }
+
+        &__buttons {
+            margin-right: 7px;
+        }
+    }
+
+    .main {
+        &__blog {
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        &__nav {
+            width: 100%;
+        }
+
+        &__grid:last-child {
+            display: none;
+        }
+
+        &__grid-game {
+            width: 31%;
+        }
+
+        &__hero-lazy {
+            height: 20vh;
+        }
+    }
+
+    .penultimate-child {
+        display: initial;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .header {
+        &_wrapper {
+            max-width: 100%;
+        }
+
+        &__logo {
+            max-width: 90px;
+        }
+
+        &__buttons {
+            margin-right: 4px;
+        }
+
+        &__buttons-registr {
+            padding: 4px 18px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .header {
+        &__logo {
+            max-width: 70px;
+        }
+
+        &__buttons-enter {
+            font-size: 15px;
+        }
+
+        &__buttons-registr {
+            padding: 2px 5px;
+            margin: 0 3px;
+        }
+    }
+}

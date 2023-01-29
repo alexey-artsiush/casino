@@ -480,6 +480,14 @@ body {
 
 .main {
   background-color: #212132;
+  padding-bottom: 30px;
+}
+.main__hero {
+  max-width: 100%;
+}
+.main__hero-lazy {
+  background-color: rgba(37, 37, 54, 0.9490196078);
+  height: 30vh;
 }
 .main__hero-img {
   max-width: 100%;
@@ -494,7 +502,7 @@ body {
   font-size: 16px;
   font-weight: 900;
   padding: 25px 0;
-  background-image: url(/src/img/line_bg.svg);
+  background-image: url(../../img/line_bg.svg);
   background-color: rgba(37, 37, 54, 0.9490196078);
   box-shadow: inset 0 5px 25px 0 rgba(0, 0, 0, 0.8);
 }
@@ -514,11 +522,6 @@ body {
   color: #e8ce3a;
   text-decoration: none;
 }
-.main__dooter-line {
-  width: 100vw;
-  background-image: url(/src/img/dot.svg);
-  background-size: contain;
-}
 .main__grid {
   width: 100%;
   display: flex;
@@ -533,7 +536,6 @@ body {
 }
 .main__grid-game-img {
   height: 125px;
-  background: url(/src/img/webp/s1.webp) no-repeat;
   background-size: 100%;
   width: 100%;
   border-radius: 10px 10px 0 0;
@@ -560,6 +562,15 @@ body {
   text-align: center;
 }
 
+.table__wrapper {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
 table {
   width: 100%;
   margin-bottom: 20px;
@@ -568,6 +579,7 @@ table {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
   font-size: 16px;
   color: #ffffff;
+  overflow: auto;
 }
 
 table td,
@@ -587,53 +599,92 @@ td:first-child {
   border-right: 1px solid rgba(255, 255, 255, 0.1019607843);
 }
 
+summary {
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 20px 0;
+  color: #871628;
+  display: inline;
+  border-bottom: 2px solid #871628;
+}
+
+.review__item {
+  border: 1px dashed rgba(255, 255, 255, 0.1019607843);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  background-color: rgba(22, 22, 38, 0.8);
+  border-radius: 6px;
+}
+
+.review__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.review__person {
+  font-weight: 800;
+  color: #871628;
+}
+
 .footer {
   background-color: #161626;
 }
 .footer .wrapper {
   display: flex;
-  padding: 50px 0;
+  flex-wrap: wrap;
+  padding: 25px 0;
 }
 .footer .main__wrapper {
-  width: 95%;
+  width: 85%;
 }
 .footer .help {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: column;
   color: rgba(255, 255, 255, 0.1019607843);
+}
+.footer .help__wrapper {
+  width: 9%;
+  min-width: 70px;
 }
 .footer .help a {
   text-decoration: none;
   color: #ffffff;
   padding: 10px;
   font-size: 15px;
+  padding: 10px;
+}
+.footer .help a:hover {
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.1019607843);
 }
 .footer .help-title {
   width: 100%;
-  margin-bottom: 18px;
+  margin: 18px 0;
   height: 30px;
-  border-bottom: 1px solid #222330;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
   line-height: 30px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
+  color: #ffffff;
 }
 .footer .payments {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .footer .payments__wrapper {
-  width: 7%;
+  width: 9%;
   min-width: 70px;
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Roboto"), url("src/fonts/roboto.woff2") format("woff2"), url("src/fonts/roboto.woff") format("woff");
-}
 body {
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 300;
@@ -666,4 +717,81 @@ h2 {
   margin: 15px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
   min-height: 40px;
+}
+
+@media (max-width: 1023px) {
+  .header__wrapper {
+    width: 88%;
+  }
+  .main__wrapper {
+    width: 88%;
+  }
+  .main__grid-game {
+    width: 23%;
+  }
+  .last-child {
+    display: none;
+  }
+  .penultimate-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    width: 100%;
+  }
+  .header__wrapper {
+    width: 100%;
+  }
+  .header__logo {
+    padding: 0;
+    max-width: 120px;
+  }
+  .header__buttons {
+    margin-right: 7px;
+  }
+  .main__blog h1 {
+    font-size: 30px;
+  }
+  .main__nav {
+    width: 100%;
+  }
+  .main__grid:last-child {
+    display: none;
+  }
+  .main__grid-game {
+    width: 31%;
+  }
+  .main__hero-lazy {
+    height: 20vh;
+  }
+  .penultimate-child {
+    display: initial;
+  }
+}
+@media (max-width: 350px) {
+  .header_wrapper {
+    max-width: 100%;
+  }
+  .header__logo {
+    max-width: 90px;
+  }
+  .header__buttons {
+    margin-right: 4px;
+  }
+  .header__buttons-registr {
+    padding: 4px 18px;
+  }
+}
+@media (max-width: 370px) {
+  .header__logo {
+    max-width: 70px;
+  }
+  .header__buttons-enter {
+    font-size: 15px;
+  }
+  .header__buttons-registr {
+    padding: 2px 5px;
+    margin: 0 3px;
+  }
 }/*# sourceMappingURL=index.css.map */
