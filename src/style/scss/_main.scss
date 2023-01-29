@@ -20,6 +20,7 @@ body {
     }
 
     &__buttons {
+        font-weight: 700;
         display: flex;
         margin: auto 0;
         margin-left: auto;
@@ -96,39 +97,115 @@ body {
     }
 
     &__nav-descks {
+        padding: 7px 0;
+        border-radius: 7px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
         color: $c-green;
         text-decoration: none;
+        position: relative;
 
         img {
             margin-right: 7px;
         }
+    }
+
+    &__nav-descks:after {
+        content: " ";
+        background: $c-grey;
+        width: 2px;
+        height: 50px;
+        right: -1px;
+        position: absolute;
+    }
+
+
+    &__nav-descks:hover {
+        background-color: $c-grey;
+        color: $c-green;
     }
 
     &__nav-games {
+        padding: 7px 0;
+        border-radius: 7px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: $c-red-brown;
         text-decoration: none;
+        position: relative;
 
         img {
             margin-right: 7px;
         }
+    }
+
+    &__nav-games:after {
+        content: " ";
+        background: $c-grey;
+        width: 2px;
+        height: 50px;
+        right: -1px;
+        position: absolute;
+    }
+
+    &__nav-games:hover {
+        background-color: $c-grey;
+        color: $c-red-brown;
     }
 
     &__nav-slots {
+        padding: 7px 0;
+        border-radius: 7px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: $c-aqua;
         text-decoration: none;
+        position: relative;
 
         img {
             margin-right: 7px;
         }
     }
 
+    &__nav-slots:after {
+        content: " ";
+        background: $c-grey;
+        width: 2px;
+        height: 50px;
+        right: -1px;
+        position: absolute;
+    }
+
+    &__nav-slots:hover {
+        background-color: $c-grey;
+        color: $c-aqua;
+    }
+
     &__nav-tournirs {
+        padding: 7px 0;
+        border-radius: 7px;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: $c-yellow;
         text-decoration: none;
 
         img {
             margin-right: 7px;
         }
+    }
+
+    &__nav-tournirs:hover {
+        background-color: $c-grey;
+        color: $c-yellow;
     }
 
     &__grid {
@@ -149,10 +226,31 @@ body {
         transition: transform .2s;
     }
 
-    &__grid-game:hover {
-        transform: scale(1.05);
+    &__grid-game-link {
+        font-weight: 800;
+        transition: all 1s;
+        display: none;
+        padding: 6px 20px;
+        background-color: $c-green;
+        position: absolute;
+        margin: -90px 0 0 63px;
+        box-shadow: 0 3px 0 0 $c-green-dark, 0 5px 4px 0 $c-black;
+        border-radius: 30px;
     }
 
+    &__grid-game:hover {
+
+        img,
+        div {
+            filter: brightness(0.5);
+        }
+
+        transform: scale(1.05);
+
+        .main__grid-game-link {
+            display: inline-block;
+        }
+    }
 
     &__grid-game-img {
         -moz-background-size: 100%;
@@ -163,6 +261,7 @@ body {
     }
 
     &__grid-game-title {
+        text-align: center;
         background-color: $c-black-light;
         display: flex;
         width: 230px;
