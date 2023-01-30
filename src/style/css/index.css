@@ -815,6 +815,7 @@ summary {
 .partners {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .partners .partner {
   padding: 10px 15px;
