@@ -111,11 +111,10 @@ body {
     &__nav-descks {
         padding: 7px 0;
         border-radius: 7px;
-        width: 20%;
+        width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 25%;
         color: $c-green;
         text-decoration: none;
         position: relative;
@@ -143,7 +142,7 @@ body {
     &__nav-games {
         padding: 7px 0;
         border-radius: 7px;
-        width: 20%;
+        width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -173,7 +172,7 @@ body {
     &__nav-slots {
         padding: 7px 0;
         border-radius: 7px;
-        width: 20%;
+        width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -203,7 +202,7 @@ body {
     &__nav-tournirs {
         padding: 7px 0;
         border-radius: 7px;
-        width: 20%;
+        width: 25%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -221,10 +220,11 @@ body {
     }
 
     &__grid {
+        display: none !important;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         padding-top: 20px;
     }
 
@@ -276,7 +276,7 @@ body {
         text-align: center;
         background-color: $c-black-light;
         display: flex;
-        width: 230px;
+        width: 100%;
         height: 40px;
         border-radius: 0 0 10px 10px;
 
@@ -301,7 +301,59 @@ body {
     li {
         margin: 7px 0;
     }
+
+
 }
+
+.main__assurance-wrapper {
+    background-color: $c-black-light;
+    display: flex;
+    position: relative;
+
+    .assurance__card {
+        display: flex;
+        padding: 35px 0;
+        width: 33%;
+
+        h5 {
+            font-size: 16px;
+            color: $c-white;
+            font-weight: 900;
+        }
+
+        p {
+            font-size: 14px;
+            padding-top: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+            font-weight: 500;
+            display: inline-block;
+            line-height: 1;
+            color: $c-white-1;
+        }
+    }
+}
+
+.main__assurance-wrapper::before,
+.main__assurance-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    // background-image: url(https://alexey-artsiush.github.io/casino/src/img/dot.svg);
+    background-image: url(../../img/dot.svg);
+    background-size: contain;
+    background-repeat: repeat-x;
+}
+
+.main__assurance-wrapper::after {
+    bottom: 4px;
+}
+
+
+
 
 //TABLE
 .table__wrapper {
@@ -379,7 +431,8 @@ summary {
 
 //FOOTER
 .footer {
-    background-color: $c-black-light;
+    background-color: $c-black-1;
+    box-shadow: inset 0 25px 25px -10px rgb(0 0 0 / 80%);
     font-weight: 400;
 
     .wrapper {
@@ -389,7 +442,7 @@ summary {
     }
 
     .main__wrapper {
-        width: 85%;
+        width: 75%;
     }
 
     .help {

@@ -538,11 +538,10 @@ body {
 .main__nav-descks {
   padding: 7px 0;
   border-radius: 7px;
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25%;
   color: #4ccd4e;
   text-decoration: none;
   position: relative;
@@ -565,7 +564,7 @@ body {
 .main__nav-games {
   padding: 7px 0;
   border-radius: 7px;
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -591,7 +590,7 @@ body {
 .main__nav-slots {
   padding: 7px 0;
   border-radius: 7px;
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -617,7 +616,7 @@ body {
 .main__nav-tournirs {
   padding: 7px 0;
   border-radius: 7px;
-  width: 20%;
+  width: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -632,10 +631,11 @@ body {
   color: #e8ce3a;
 }
 .main__grid {
+  display: none !important;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 20px;
 }
 .main__grid-game {
@@ -679,7 +679,7 @@ body {
   text-align: center;
   background-color: #161626;
   display: flex;
-  width: 230px;
+  width: 100%;
   height: 40px;
   border-radius: 0 0 10px 10px;
 }
@@ -698,6 +698,49 @@ body {
 }
 .main li {
   margin: 7px 0;
+}
+
+.main__assurance-wrapper {
+  background-color: #161626;
+  display: flex;
+  position: relative;
+}
+.main__assurance-wrapper .assurance__card {
+  display: flex;
+  padding: 35px 0;
+  width: 33%;
+}
+.main__assurance-wrapper .assurance__card h5 {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 900;
+}
+.main__assurance-wrapper .assurance__card p {
+  font-size: 14px;
+  padding-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 1;
+  color: #7d8196;
+}
+
+.main__assurance-wrapper::before,
+.main__assurance-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background-image: url(../../img/dot.svg);
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+.main__assurance-wrapper::after {
+  bottom: 4px;
 }
 
 .table__wrapper {
@@ -769,7 +812,8 @@ summary {
 }
 
 .footer {
-  background-color: #161626;
+  background-color: #0a0a14;
+  box-shadow: inset 0 25px 25px -10px rgba(0, 0, 0, 0.8);
   font-weight: 400;
 }
 .footer .wrapper {
@@ -778,7 +822,7 @@ summary {
   padding: 25px 0;
 }
 .footer .main__wrapper {
-  width: 85%;
+  width: 75%;
 }
 .footer .help {
   display: flex;
@@ -893,19 +937,43 @@ h2 {
     height: 27vh;
   }
 }
+@media (max-width: 700px) {
+  .main__nav-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .main__nav-slots, .main__nav-games, .main__nav-descks, .main__nav-tournirs {
+    width: 49%;
+  }
+  .main__nav-games {
+    position: initial;
+  }
+}
 @media (max-width: 600px) {
   .header {
     max-width: 100%;
   }
   .header__wrapper {
     max-width: 100%;
+    flex-wrap: wrap;
   }
   .header__logo {
     padding: 0;
-    max-width: 120px;
+    height: 70px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header__logo a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .header__logo img {
+    max-height: 100%;
+    max-width: 300px;
   }
   .header__buttons {
-    margin-right: 7px;
+    margin: 20px auto;
   }
   .main__blog h1 {
     font-size: 30px;
@@ -926,11 +994,21 @@ h2 {
   .main__nav__nav-slots {
     width: 25%;
   }
+  .main__hero img {
+    margin-top: 113px;
+  }
   .main__hero-lazy {
     height: 200px;
   }
+  .main__grid-game {
+    width: 45%;
+    height: 100%;
+  }
 }
 @media (max-width: 500px) {
+  .main__grid-game {
+    margin: 5px 5px;
+  }
   .main__nav-slots {
     width: 45%;
     margin-bottom: 15px;
@@ -954,69 +1032,12 @@ h2 {
     position: inherit;
   }
 }
-@media (max-width: 350px) {
-  .header__logo {
-    max-width: 70px;
-  }
-  .header__buttons-enter {
-    font-size: 15px;
-  }
-  .header__buttons-registr {
-    padding: 2px 5px;
-    margin: 0 3px;
-  }
-}
 @media (max-width: 370px) {
   h2 {
     font-size: 18px;
   }
-  .header__logo {
-    max-width: 70px;
-  }
-  .header__buttons {
-    margin-right: 4px;
-  }
-  .header__buttons-registr {
-    padding: 4px 18px;
-  }
 }
 @media (max-width: 320px) {
-  .header {
-    padding-bottom: 10px;
-  }
-  .header__buttons-ent {
-    margin: 10px 0;
-    display: flex;
-    justify-content: center;
-  }
-  .header__buttons-enter {
-    display: flex;
-    justify-content: center;
-  }
-  .header__buttons-reg {
-    display: flex;
-    align-items: center;
-  }
-  .header__buttons-registr {
-    padding: 2px 10px;
-    margin-left: 3px;
-  }
-  .header__wrapper {
-    flex-wrap: wrap;
-  }
-  .header__logo {
-    width: 100px;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-  }
-  .header__buttons {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 4px;
-  }
   .main__hero-img {
     margin-top: 30px;
   }
@@ -1025,13 +1046,6 @@ h2 {
   }
 }
 @media (max-width: 250px) {
-  .header {
-    max-width: 100%;
-  }
-  .header__logo {
-    display: flex;
-    justify-content: c;
-  }
   .main__nav-slots {
     width: 100%;
     display: flex;
@@ -1056,13 +1070,7 @@ h2 {
     align-items: center;
   }
   .main__grid-game {
-    max-width: 90%;
-    height: 100px;
-    margin: 30px 0;
-  }
-  .main img,
-.main .main__grid-game-title {
-    max-width: 90%;
+    margin: 1px;
   }
   .main summary,
 .main h2,

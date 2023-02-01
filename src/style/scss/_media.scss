@@ -34,6 +34,27 @@
     }
 }
 
+@media (max-width: 700px) {
+    .main {
+        &__nav-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__nav-slots,
+        &__nav-games,
+        &__nav-descks,
+        &__nav-tournirs {
+            width: 49%;
+        }
+
+        &__nav-games {
+            position: initial;
+        }
+    }
+
+}
+
 
 @media (max-width: 600px) {
     .header {
@@ -41,15 +62,30 @@
 
         &__wrapper {
             max-width: 100%;
+            flex-wrap: wrap;
         }
 
         &__logo {
             padding: 0;
-            max-width: 120px;
+            height: 70px;
+            width: 100%;
+            margin: 0 auto;
+
+            a {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                max-height: 100%;
+                max-width: 300px;
+            }
         }
 
         &__buttons {
-            margin-right: 7px;
+            margin: 20px auto;
+
         }
     }
 
@@ -81,14 +117,29 @@
             }
         }
 
+        &__hero {
+            img {
+                margin-top: 113px;
+            }
+        }
+
         &__hero-lazy {
             height: 200px
+        }
+
+        &__grid-game {
+            width: 45%;
+            height: 100%;
         }
     }
 }
 
 @media (max-width: 500px) {
     .main {
+        &__grid-game {
+            margin: 5px 5px;
+        }
+
         &__nav-slots {
             width: 45%;
             margin-bottom: 15px;
@@ -122,87 +173,15 @@
     }
 }
 
-@media (max-width: 350px) {
-    .header {
-        &__logo {
-            max-width: 70px;
-        }
-
-        &__buttons-enter {
-            font-size: 15px;
-        }
-
-        &__buttons-registr {
-            padding: 2px 5px;
-            margin: 0 3px;
-        }
-    }
-}
 
 @media (max-width: 370px) {
     h2 {
         font-size: 18px;
     }
 
-    .header {
-        &__logo {
-            max-width: 70px;
-        }
-
-        &__buttons {
-            margin-right: 4px;
-        }
-
-        &__buttons-registr {
-            padding: 4px 18px;
-        }
-    }
 }
 
 @media (max-width: 320px) {
-    .header {
-        padding-bottom: 10px;
-
-        &__buttons-ent {
-            margin: 10px 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        &__buttons-enter {
-            display: flex;
-            justify-content: center;
-        }
-
-        &__buttons-reg {
-            display: flex;
-            align-items: center;
-        }
-
-        &__buttons-registr {
-            padding: 2px 10px;
-            margin-left: 3px;
-        }
-
-        &__wrapper {
-            flex-wrap: wrap;
-        }
-
-        &__logo {
-            width: 100px;
-            display: flex;
-            justify-content: center;
-            margin: 0 auto;
-        }
-
-        &__buttons {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-right: 4px;
-        }
-    }
 
     .main__hero-img {
         margin-top: 30px;
@@ -214,14 +193,6 @@
 }
 
 @media (max-width: 250px) {
-    .header {
-        max-width: 100%;
-
-        &__logo {
-            display: flex;
-            justify-content: c;
-        }
-    }
 
     .main {
         &__nav-slots {
@@ -252,15 +223,7 @@
         }
 
         &__grid-game {
-            max-width: 90%;
-            height: 100px;
-            margin: 30px 0;
-        }
-
-        img,
-        .main__grid-game-title {
-            max-width: 90%;
-
+            margin: 1px;
         }
 
         summary,
