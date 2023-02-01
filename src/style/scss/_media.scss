@@ -34,6 +34,16 @@
     }
 }
 
+@media (max-width: 800px) {
+    .assurance__card-content {
+        margin: auto;
+
+        p {
+            display: none !important;
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .main {
         &__nav-wrapper {
@@ -50,6 +60,20 @@
 
         &__nav-games {
             position: initial;
+        }
+    }
+
+    .main__assurance-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .assurance__card {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .assurance__card-content {
+            margin: auto 5px;
         }
     }
 
