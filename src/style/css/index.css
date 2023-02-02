@@ -646,7 +646,6 @@ body {
   color: #e8ce3a;
 }
 .main__grid {
-  display: none !important;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -907,7 +906,7 @@ summary {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "verdana", sans-serif;
   font-weight: 300;
 }
 
@@ -981,16 +980,14 @@ h2 {
   .main__nav-games {
     position: initial;
   }
-  .main__assurance-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .main__assurance-wrapper .assurance__card {
-    width: 100%;
-    justify-content: center;
+    padding: 24px 20px;
   }
-  .main__assurance-wrapper .assurance__card-content {
-    margin: auto 5px;
+  .main__assurance-wrapper h5 {
+    font-size: 12px !important;
+  }
+  .main__assurance-wrapper img {
+    width: 25px;
   }
 }
 @media (max-width: 600px) {
@@ -1074,6 +1071,9 @@ h2 {
   }
   .main__nav-games {
     position: inherit;
+  }
+  .main__assurance-wrapper h5 {
+    display: none;
   }
 }
 @media (max-width: 370px) {

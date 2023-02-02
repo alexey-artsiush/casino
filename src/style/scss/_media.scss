@@ -64,16 +64,16 @@
     }
 
     .main__assurance-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-
         .assurance__card {
-            width: 100%;
-            justify-content: center;
+            padding: 24px 20px;
         }
 
-        .assurance__card-content {
-            margin: auto 5px;
+        h5 {
+            font-size: 12px !important;
+        }
+
+        img {
+            width: 25px;
         }
     }
 
@@ -193,6 +193,12 @@
 
         &__nav-games {
             position: inherit;
+        }
+    }
+
+    .main__assurance-wrapper {
+        h5 {
+            display: none;
         }
     }
 }
