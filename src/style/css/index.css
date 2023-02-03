@@ -463,7 +463,7 @@ body {
   padding: 10px 15px;
 }
 .header__buttons {
-  font-weight: 700;
+  font-weight: 500;
   display: flex;
   margin: auto 0;
   margin-left: auto;
@@ -493,7 +493,7 @@ body {
 
 .main {
   padding-bottom: 30px;
-  background: url(../../img/bg-main.svg) repeat-y #212132;
+  background: url(../../img/bg-main.webp) repeat-y #212132;
   background-size: 100%;
 }
 .main__hero {
@@ -658,7 +658,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0;
-  margin: 10px 0 0 0;
+  margin: 10px 0 30px 0;
 }
 .main__grid-game {
   cursor: pointer;
@@ -838,14 +838,36 @@ td:first-child {
   border-right: 1px solid rgba(255, 255, 255, 0.1019607843);
 }
 
+.faq p {
+  padding: 10px;
+}
+.faq ul {
+  padding: 10px;
+}
+
 summary {
+  padding: 10px;
   cursor: pointer;
   font-size: 22px;
   font-weight: 800;
-  margin: 20px 0;
-  color: #9a021b;
+  margin: 20px auto;
+  color: #ffffff;
   display: inline;
-  border-bottom: 2px solid #9a021b;
+  padding-bottom: 15px;
+  width: 95%;
+  border-bottom: 1px solid #7d8196;
+}
+
+.rev {
+  margin: 35px 0;
+}
+
+details {
+  padding: 10px;
+  background-color: #161626;
+  margin: 15px 0;
+  border: 1px solid #7d8196;
+  border-radius: 5px;
 }
 
 .review__item {
@@ -866,7 +888,7 @@ summary {
 
 .review__person {
   font-weight: 800;
-  color: #9a021b;
+  color: #ff0015;
 }
 
 .footer {
@@ -1127,6 +1149,12 @@ h2 {
   }
 }
 @media (max-width: 250px) {
+  .main__assurance {
+    display: none;
+  }
+  summary {
+    border-bottom: none;
+  }
   .header__buttons-ent {
     font-size: 12px;
     display: flex;

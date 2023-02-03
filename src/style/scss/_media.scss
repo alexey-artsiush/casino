@@ -226,6 +226,14 @@
 }
 
 @media (max-width: 250px) {
+    .main__assurance {
+        display: none;
+    }
+
+    summary {
+        border-bottom: none;
+    }
+
     .header__buttons-ent {
         font-size: 12px;
         display: flex;
