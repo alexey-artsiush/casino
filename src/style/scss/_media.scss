@@ -87,6 +87,7 @@
         &__wrapper {
             max-width: 100%;
             flex-wrap: wrap;
+            padding: 0;
         }
 
         &__logo {
@@ -103,13 +104,12 @@
 
             img {
                 max-height: 100%;
-                max-width: 300px;
+                max-width: 180px;
             }
         }
 
         &__buttons {
             margin: 20px auto;
-
         }
     }
 
@@ -212,6 +212,9 @@
 }
 
 @media (max-width: 320px) {
+    .header__buttons {
+        margin: 14px auto;
+    }
 
     .main__hero-img {
         margin-top: 30px;
@@ -223,6 +226,21 @@
 }
 
 @media (max-width: 250px) {
+    .header__buttons-ent {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+
+    .header__buttons-registr {
+        margin: 0 6px;
+        padding: 4px 5px;
+        font-size: 12px;
+    }
+
+    .header__buttons {
+        align-items: center;
+    }
 
     .main {
         &__nav-slots {
@@ -288,6 +306,22 @@
 }
 
 @media (max-width: 170px) {
+    .header__buttons-ent {
+        font-size: 10px;
+    }
+
+    .header__buttons-registr {
+        margin: 0 3px;
+        padding: 1px 1px;
+        font-size: 10px;
+    }
+
+    .header__buttons-registr {
+        align-items: center;
+        display: flex;
+    }
+
+
     .review__person {
         font-size: 12px;
     }

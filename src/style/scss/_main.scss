@@ -9,6 +9,12 @@ body {
     position: fixed;
     width: 100%;
 
+    a:hover {
+        color: $c-white;
+    }
+
+    button:hover {}
+
 
     &__wrapper {
         background-color: $c-blue-dark;
@@ -41,7 +47,14 @@ body {
         margin: 0 10px;
         box-shadow: 0 3px 0 0 $c-red-dark, 0 4px 4px 0 #000;
         text-decoration: none;
+        transition: all 0.5s;
     }
+
+    &__buttons-registr:hover {
+        box-shadow: 0 3px 0 0 $c-red-dark, 0 4px 4px 0 $c-black, inset 0 5px 7px 0px rgba(255, 255, 255, 0.8);
+    }
+
+
 
     &__logo {
         height: 35px;
@@ -120,7 +133,7 @@ body {
         justify-content: space-around;
         font-size: 16px;
         font-weight: 900;
-        padding: 25px 0;
+        padding: 3px 0;
         background-color: $c-blue-dark;
         text-align: center;
     }
@@ -241,7 +254,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        padding-top: 20px;
+        padding: 20px 0;
+        margin: 10px 0 0 0;
     }
 
     &__grid-game {
@@ -266,18 +280,41 @@ body {
         border-radius: 30px;
     }
 
+    &__grid-game-link-demo {
+        font-size: 16px;
+        font-weight: 800;
+        transition: all 1s;
+        display: none;
+        padding: 6px 20px;
+        background-color: $c-white-2;
+        position: absolute;
+        margin: 115px 0 0 -155px;
+        border-radius: 30px;
+    }
+
+    &__grid-game-link-demo:hover {
+        color: $c-white;
+        transform: scale(1.07);
+    }
+
     &__grid-game:hover {
 
         img,
         div {
-            filter: brightness(0.5);
+            filter: brightness(0.3);
         }
 
         transform: scale(1.05);
 
-        .main__grid-game-link {
+        .main__grid-game-link,
+        .main__grid-game-link-demo {
             display: inline-block;
         }
+    }
+
+    .main__grid-game-link:hover {
+        color: $c-white;
+        box-shadow: 0 3px 0 0 $c-green-dark, 0 5px 4px 0 $c-black, inset 0 10px 10px 0px rgba(255, 255, 255, 0.8);
     }
 
     &__grid-game-img {
