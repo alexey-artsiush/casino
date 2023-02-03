@@ -356,6 +356,14 @@ body {
     }
 }
 
+.consist {
+    margin-bottom: 35px;
+
+    h2 {
+        margin: 17px 0 8px;
+    }
+}
+
 .main__assurance {
     margin: -2px 0;
 }
@@ -444,7 +452,7 @@ table th {
 }
 
 table tbody td {
-    border-bottom: 1px solid $c-blue-dark;
+    // border-bottom: 1px solid $c-blue-dark;
     font-weight: 300;
 }
 

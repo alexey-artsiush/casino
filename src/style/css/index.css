@@ -742,6 +742,13 @@ body {
   margin: 7px 0;
 }
 
+.consist {
+  margin-bottom: 35px;
+}
+.consist h2 {
+  margin: 17px 0 8px;
+}
+
 .main__assurance {
   margin: -2px 0;
 }
@@ -824,7 +831,6 @@ table th {
 }
 
 table tbody td {
-  border-bottom: 1px solid rgba(37, 37, 54, 0.9490196078);
   font-weight: 300;
 }
 
@@ -961,10 +967,9 @@ h1 {
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 24px;
   margin: 15px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1019607843);
   min-height: 40px;
 }
 
