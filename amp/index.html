@@ -479,7 +479,7 @@
         .header__wrapper {
             background-color: rgba(37, 37, 54, 0.9490196078);
             margin: 0 auto;
-            width: 75%;
+            max-width: 95%;
             display: flex;
             padding: 10px 15px;
         }
@@ -532,7 +532,6 @@
             object-fit: cover;
             width: 100%;
             height: 100%;
-            margin-top: 50px;
         }
 
         .main__hero-lazy {
@@ -612,6 +611,7 @@
 
         .main__nav-descks img {
             margin-right: 7px;
+            margin-left: -1px;
         }
 
         .main__nav-descks:after {
@@ -642,6 +642,7 @@
 
         .main__nav-games img {
             margin-right: 7px;
+            margin-left: -1px;
         }
 
         .main__nav-games:after {
@@ -672,6 +673,7 @@
 
         .main__nav-slots img {
             margin-right: 7px;
+            margin-left: -1px;
         }
 
         .main__nav-slots:after {
@@ -701,6 +703,7 @@
 
         .main__nav-tournirs img {
             margin-right: 7px;
+            margin-left: -1px;
         }
 
         .main__nav-tournirs:hover {
@@ -719,7 +722,7 @@
 
         .main__grid-game {
             cursor: pointer;
-            margin: 20px 10px;
+            margin: 50px 10px;
             width: 230px;
             height: 185px;
             box-shadow: 0 4px 9px 0 #161626;
@@ -731,10 +734,10 @@
             font-weight: 800;
             transition: all 1s;
             display: none;
-            padding: 6px 20px;
+            padding: 3% 10%;
             background-color: #4ccd4e;
             position: absolute;
-            margin: 55px 0 0 55px;
+            margin: -60% 0 0 26%;
             box-shadow: 0 3px 0 0 #349b36, 0 5px 4px 0 #000;
             border-radius: 30px;
         }
@@ -744,10 +747,10 @@
             font-weight: 800;
             transition: all 1s;
             display: none;
-            padding: 6px 20px;
+            padding: 3% 9%;
             background-color: #383c51;
             position: absolute;
-            margin: 115px 0 0 65px;
+            margin: -31% 0 0 32%;
             border-radius: 30px;
         }
 
@@ -841,6 +844,7 @@
 
         .main__assurance-wrapper .assurance__card img {
             margin-right: 10px;
+            margin-right: -1px;
         }
 
         .main__assurance-wrapper .assurance__card h5 {
@@ -1086,12 +1090,12 @@
 
         @media (max-width: 1023px) {
             .header__wrapper {
-                width: 99%;
+                max-width: 99%;
             }
 
             .main__nav-wrapper,
             .main__wrapper {
-                width: 99%;
+                max-width: 99%;
             }
 
             .main__hero-lazy {
@@ -1114,6 +1118,10 @@
         @media (max-width: 800px) {
             .assurance__card-content {
                 margin: auto;
+            }
+
+            .assurance__card-img {
+                min-width: 40px;
             }
 
             .assurance__card-content p {
@@ -1152,6 +1160,10 @@
         }
 
         @media (max-width: 600px) {
+            .main__grid-game {
+                margin: 15px 10px;
+            }
+
             .header {
                 max-width: 100%;
             }
@@ -1163,6 +1175,8 @@
             }
 
             .header__logo {
+                display: flex;
+                justify-content: center;
                 padding: 0;
                 height: 70px;
                 width: 100%;
@@ -1224,6 +1238,20 @@
         }
 
         @media (max-width: 500px) {
+            .main__assurance-wrapper .assurance__card img {
+                margin-right: 3px;
+                margin-left: 2px;
+            }
+
+            .assurance__card {
+                display: flex;
+                justify-content: center;
+            }
+
+            .assurance__card-content {
+                display: none;
+            }
+
             .main__grid-game {
                 margin: 5px 5px;
             }
@@ -1514,8 +1542,8 @@
     <div class="header">
         <div class="header__wrapper">
             <div class="header__logo">
-                <amp-img width="140" height="40" alt="logo"
-                    src="https://alexey-artsiush.github.io/casino/src/img/logo.svg" layout="responsive"></amp-img>
+                <amp-img src="https://alexey-artsiush.github.io/casino/src/img/logo.svg" layout="intrinsic" width="160"
+                    height="35" alt="logo"></amp-img>
             </div>
             <div class="header__buttons">
                 <div class="header__buttons-ent">
@@ -1531,9 +1559,13 @@
     </div>
     <main class="main">
         <div class="main__hero">
-            <amp-img alt="A view of the sea" src="https://alexey-artsiush.github.io/casino/src/img/slider/slide-1.webp"
-                width="1.33" height="1" layout="responsive">
-            </amp-img>
+            <amp-img src="https://alexey-artsiush.github.io/casino/src/img/slider/slide-1.webp"
+                srcset="https://alexey-artsiush.github.io/casino/src/img/slider/slide-1-tb.webp 650w, https://alexey-artsiush.github.io/casino/src/img/slider/slide-1-mb.webp 400w"
+                width="1080" height="225" layout="responsive" alt="casino Vavada"></amp-img>
+            <!-- <amp-img alt="A view of the sea"
+                src="https://alexey-artsiush.github.io/casino/src/img/slider/slide-1-mb.webp" width="1" height="1"
+                layout="intrinsic">
+            </amp-img> -->
             <!-- <picture>
                 <source media="(min-width: 900px)" srcset="src/img/slider/slide-1.webp" type="image/webp">
                 <source media="(min-width: 601px)" srcset="src/img/slider/slide-1-tb.webp" type="image/webp">
@@ -1546,19 +1578,20 @@
         </div>
         <div class="main__nav">
             <div class="main__nav-wrapper">
-                <a class="main__nav-slots" href="https://alexey-artsiush.github.io/casino/#/" width="1" height="1"
-                    layout="responsive"><amp-img src="https://alexey-artsiush.github.io/casino/src/img/icon_slots.webp"
-                        alt="SLOTS"></amp-img>Слоты</a>
+                <a class="main__nav-slots" href="https://alexey-artsiush.github.io/casino/#/"><amp-img
+                        src="https://alexey-artsiush.github.io/casino/src/img/icon_slots.webp" width="1" height="1"
+                        layout="intrinsic" alt="SLOTS"></amp-img>
+                    Слоты</a>
                 <a class="main__nav-games" href="https://alexey-artsiush.github.io/casino/#/"><amp-img
                         src="https://alexey-artsiush.github.io/casino/src/img/icon_live.webp" width="1" height="1"
-                        layout="responsive" alt="GAMES"></amp-img>
+                        layout="intrinsic" alt="GAMES"></amp-img>
                     Live игры</a>
                 <a class="main__nav-descks" href="https://alexey-artsiush.github.io/casino/#/"><amp-img
                         src="https://alexey-artsiush.github.io/casino/src/img/icon_desk.webp" width="1" height="1"
-                        layout="responsive" alt="TABLES"></amp-img>Столы</a>
+                        layout="intrinsic" alt="TABLES"></amp-img>Столы</a>
                 <a class="main__nav-tournirs" href="https://alexey-artsiush.github.io/casino/#/"><amp-img
                         src="https://alexey-artsiush.github.io/casino/src/img/icon_tour.webp" width="1" height="1"
-                        layout="responsive" alt="TOURNIRS"></amp-img>Турниры</a>
+                        layout="intrinsic" alt="TOURNIRS"></amp-img>Турниры</a>
             </div>
 
         </div>
@@ -2873,27 +2906,34 @@
     <div class="main__assurance">
         <div class="main__assurance-wrapper">
             <div class="assurance__card">
-                <amp-img width="37" height="37" src="https://alexey-artsiush.github.io/casino/src/img/legally.webp"
-                    alt="Легальность"> </amp-img>
+                <div class="assurance__card-img">
+                    <amp-img width="37" height="37" src="https://alexey-artsiush.github.io/casino/src/img/legally.webp"
+                        alt="Легальность"> </amp-img>
+                </div>
                 <div class="assurance__card-content">
                     <h5>Легальность</h5>
                     <p>Вы получите только проверенный софт от ведущих разработчиков!</p>
                 </div>
             </div>
             <div class="assurance__card">
-                <amp-img width="36" height="40" src="https://alexey-artsiush.github.io/casino/src/img/safe.webp"
-                    alt="Безопасность"></amp-img>
+                <div class="assurance__card-img">
+                    <amp-img width="36" height="40" src="https://alexey-artsiush.github.io/casino/src/img/safe.webp"
+                        alt="Безопасность"></amp-img>
+                </div>
                 <div class="assurance__card-content">
                     <h5>Безопасность</h5>
                     <p>Ваши данные защищщены современными протоколами безопасности!</p>
                 </div>
             </div>
             <div class="assurance__card">
-                <amp-img width="36" height="34" src="https://alexey-artsiush.github.io/casino/src/img/profit.webp"
-                    alt="Прибыльность"></amp-img>
+                <div class="assurance__card-img">
+                    <amp-img width="36" height="34" src="https://alexey-artsiush.github.io/casino/src/img/profit.webp"
+                        alt="Прибыльность"></amp-img>
+                </div>
                 <div class="assurance__card-content">
                     <h5>Прибыльность</h5>
-                    <p>Учавствуйте в прибыльных розыгрышах, становитесь партнерами и развивайтесь вместе с Вавада!</p>
+                    <p>Учавствуйте в прибыльных розыгрышах, становитесь партнерами и развивайтесь вместе с Вавада!
+                    </p>
                 </div>
             </div>
         </div>
@@ -2914,25 +2954,26 @@
 
             <div class="payments">
                 <span class="help-title">СПОСОБЫ ОПЛАТЫ</span>
+                <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p1.svg" alt="payment" width="70"
+                    height="20" layout="intrinsic"></amp-img>
                 <div class="wrapper">
-                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p1.svg"
-                        alt="payment"></amp-img>
+
                 </div>
                 <div class="payments__wrapper">
-                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p2.svg"
-                        alt="payment"></amp-img>
+                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p2.svg" alt="payment"
+                        width="70" height="20" layout="responsive"></amp-img>
                 </div>
                 <div class="payments__wrapper">
-                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p3.svg"
-                        alt="payment"></amp-img>
+                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p3.svg" alt="payment"
+                        width="70" height="20"></amp-img>
                 </div>
                 <div class="payments__wrapper">
-                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p4.svg"
-                        alt="payment"></amp-img>
+                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p4.svg" alt="payment"
+                        width="70" height="20"></amp-img>
                 </div>
                 <div class="payments__wrapper">
-                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p5.svg"
-                        alt="payment"></amp-img>
+                    <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p5.svg" alt="payment"
+                        width="70" height="20"></amp-img>
                 </div>
                 <div class="payments__wrapper">
                     <amp-img src="https://alexey-artsiush.github.io/casino/src/img/payments/p6.svg"
