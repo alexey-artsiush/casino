@@ -582,6 +582,10 @@ details {
         flex-wrap: wrap;
         justify-content: center;
 
+        img {
+            max-width: 70px;
+        }
+
         &__wrapper {
             width: 9%;
             min-width: 70px;

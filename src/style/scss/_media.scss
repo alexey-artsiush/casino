@@ -201,6 +201,23 @@
             display: none;
         }
     }
+
+    .assurance__card {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__assurance-wrapper .assurance__card img {
+        margin: 0;
+    }
+
+    .main__assurance-wrapper img {
+        width: 33px;
+    }
+
+    .assurance__card-content {
+        position: absolute;
+    }
 }
 
 
